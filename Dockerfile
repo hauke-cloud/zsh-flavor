@@ -14,6 +14,8 @@ RUN usermod -d /home/smee -m ubuntu \
 
 USER 1000:1000
 
+ENV HISTFILE=/home/smee/history/.zsh_history
+
 RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.2.1/zsh-in-docker.sh)"
 
 VOLUME /work
